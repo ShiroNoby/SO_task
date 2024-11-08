@@ -22,22 +22,22 @@ int main() {
 
             switch (str[size]) {
 
-            case L':': {
-
-                str.erase(size, 1);
-                --size;
-                --sizeStr;
-                break;
-
-            }
-            case L' ': {
-
-                tmp.info[index] = std::move( str.substr(start, size - start) );
-                start = size + 1;
-                ++index;
-                break;
-
-            }
+                case L':': {
+    
+                    str.erase(size, 1);
+                    --size;
+                    --sizeStr;
+                    break;
+    
+                }
+                case L' ': {
+    
+                    tmp.info[index] = std::move( str.substr(start, size - start) );
+                    start = size + 1;
+                    ++index;
+                    break;
+    
+                }
             }
 
             if (size + 1 == sizeStr) {
